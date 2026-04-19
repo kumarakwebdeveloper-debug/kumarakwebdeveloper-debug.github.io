@@ -137,6 +137,36 @@
             top: 90%;
             transform: translateY(-90%);
         }
+
+        @media(max-width:1120px) {
+            .resp h4 {
+                font-size: 26px;
+            }
+
+            .sub-page-banner.relative {
+                background-position: center -79%;
+            }
+        }
+
+        @media(max-width:768px) {
+            .sub-page-banner.relative {
+                background-size: contain;
+                background-position: center 132%;
+            }
+
+            .hero-content {
+                flex: initial;
+            }
+
+            .hero-image video {
+                height: 380px;
+                object-fit: contain;
+            }
+
+            /* .resp h4{
+                font-size:26px;
+            } */
+        }
     </style>
 </head>
 
@@ -165,7 +195,7 @@
 
             <section class="container-fluid botline primary-color ptb-100 relative">
                 <div class="row align-items-center fdcl">
-                    <div class="col-md-4 hero-content">
+                    <div class="col-md-12 col-lg-4 hero-content">
                         <h3 class="color-gold mb-md-4 text-center wow fadeInDown">Engineering the Intelligent Backbone
                             of <span class="ethno">ZacrocoZ</span></h3>
                         <div class="core-values mt-3">
@@ -175,7 +205,7 @@
                                 — is engineered for performance, security, and intelligent automation.</p>
                         </div>
                     </div>
-                    <div class="col-md-8 hero-image">
+                    <div class="col-md-12 col-lg-8 hero-image pt-md-4 pt-lg-0">
                         <video autoplay muted loop id="myVideo" class="w-100">
                             <source src="images/technology_engineering_the_Intelligent.mp4" type="video/mp4">
                         </video>
@@ -191,7 +221,7 @@
                 <div class="resp container row align-items-center justify-content-center">
                     <div class="col-md-12">
                         <div class="row align-items-center lstty">
-                            <div class="col-md-6 p-0 pe-2  sec-crd topline">
+                            <div class="col-md-12 col-lg-6 p-0 pe-2  sec-crd topline">
                                 <h4 class="color-gold mb-md-3 text-center wow fadeInDown">Blockchain Foundation</h4>
                                 <p><strong>BNB Smart Chain (BEP-20 Standard)</strong></p>
                                 <p>ZRZ operates on a high-performance blockchain infrastructure optimized for speed,
@@ -209,14 +239,14 @@
                                         governance, liquidity management, and ecosystem integrations.</p>
                                 </div>
                             </div>
-                            <div class="col-md-6 ord2 mrbt p-0">
+                            <div class="col-md-12 col-lg-6 ord2 mrbt p-0">
                                 <img src="images/Technology_Blockchain_Foundation.png" alt="Blockchain Foundation">
                             </div>
                             <!-- <div class="col-md-6 ord2 p-0">
                                 <img src="images/smart-contract-architecture.jpg"
                                     alt="Utility Activation & Controlled Expansion">
                             </div> -->
-                            <div class="col-md-12 my-3 mrbt p-0 ps-3 sec-crd topline">
+                            <div class="col-md-12 my-3 mrbt p-0 ps-3 sec-crd topline my-md-5 my-xl-0">
                                 <h4 class="color-gold mb-md-3 text-center wow fadeInDown">Smart Contract Architecture
                                 </h4>
                                 <p>The <span class="ethno">ZacrocoZ</span> ecosystem is designed with a modular,
@@ -243,11 +273,11 @@
                                         ecosystem architecture</p> -->
                                 </div>
                             </div>
-                            <div class="col-md-6 ord2 mrbt p-0">
+                            <div class="col-md-12 col-lg-6 ord2 mrbt p-0">
                                 <img src="images/Technology_AI-Integrated_Governance_Layer.png"
                                     alt="AI-Integrated Platform ">
                             </div>
-                            <div class="col-md-6 p-0 sec-crd topline">
+                            <div class="col-md-12 col-lg-6 p-0 sec-crd topline pt-md-4 pt-lg-0">
                                 <h4 class="color-gold mb-md-3 text-center wow fadeInDown">AI-Integrated Governance Layer
                                 </h4>
                                 <p><span class="ethno">ZacrocoZ</span> introduces a hybrid governance model combining
@@ -271,7 +301,7 @@
                             <!-- <div class="col-md-6 ord2 p-0">
                                 <img src="images/staking-reward.jpg" alt="Strategic Scaling">
                             </div> -->
-                            <div class="col-md-12 mrbt my-3 p-0 ps-3 sec-crd topline">
+                            <div class="col-md-12 mrbt my-3 p-0 ps-3 sec-crd topline  my-md-5 my-xl-0">
                                 <h4 class="color-gold mb-md-3 text-center wow fadeInDown">Staking & Reward Engine</h4>
                                 <p>The staking infrastructure is dynamically optimized to support ecosystem stability.
                                 </p>
@@ -291,7 +321,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6 p-0 pe-2 sec-crd topline">
+                            <div class="col-md-12 col-lg-6 p-0 pe-2 sec-crd topline">
                                 <h4 class="color-gold mb-md-3 text-center wow fadeInDown">Treasury & Liquidity
                                     Architecture</h4>
                                 <p><span class="ethno">ZacrocoZ</span> integrates structured liquidity deployment and
@@ -314,7 +344,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-md-6 mrbt p-0">
+                            <div class="col-md-12 col-lg-6 mrbt p-0">
                                 <img src="images/technology_treasury_liquidity_architecture-1.jpg"
                                     alt="Treasury & Liquidity Architecture">
                             </div>
@@ -324,11 +354,11 @@
             </section>
             <section class="container-fluid primary-color ptb-100 relative">
                 <div class="row align-items-center">
-                    <div class="col-md-6 mb-3 wow fadeInUp delay-1 con-img">
+                    <div class="col-md-12 col-lg-6 mb-3 wow fadeInUp delay-1 con-img">
                         <img src="images/Technology_Transparency__Security_Framework_1.png"
                             alt="Transparency & Security Framework">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12 col-lg-6">
                         <h2 class="color-gold mb-md-3 text-center wow fadeInRight">Transparency & Security Framework
                         </h2>
                         <div class="core-values mt-1">
@@ -352,9 +382,9 @@
                 </div>
             </section>
 
-            <section class="container-fluid primary-color pt-5 ptb-100 relative">
+            <section class="container-fluid primary-color pt-5 pt-md-3 pt-lg-5 ptb-100 relative">
                 <div class="row align-items-center justify-content-center sccr">
-                    <div class="col-md-8">
+                    <div class="col-md-12 col-lg-8">
                         <h2 class="text-center color-gold mb-md-3 wow fadeInDown">Scalability & Cross-Chain Readiness
                         </h2>
                         <p><span class="ethno">ZacrocoZ</span> is engineered for multi-chain expansion.</p>
@@ -379,7 +409,7 @@
                 </div>
             </section>
 
-            <section class="container-fluid primary-color arr-1 pt-5 ptb-100 relative">
+            <section class="container-fluid primary-color arr-1 pt-5  pt-md-3 pt-lg-5 ptb-100 relative">
                 <h2 class="color-gold mb-md-3 text-center wow fadeInDown animated mb3">System Design Philosophy</h2>
                 <p class="text-center color-gold mb-3"><span class="ethno">ZacrocoZ</span> follows four architectural
                     principles</p>
@@ -421,11 +451,11 @@
             </section>
             <section class="container-fluid primary-color pt-5 ptb-100 relative">
                 <div class="row align-items-center justify-content-center">
-                    <div class="col-md-6 con-img">
+                    <div class="col-md-12 col-lg-6 con-img">
                         <img src="images/technology__architecture_the_zacrocoz_technology_vision.png"
                             alt="Technology Vision" style="position: relative;z-index: 9;">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12 col-lg-6 pt-md-4 pt-lg-0">
                         <h2 class="color-gold mb-md-3 text-center wow fadeInDown">The <span
                                 class="ethno">ZacrocoZ</span> Technology Vision</h2>
                         <p><span class="ethno">ZacrocoZ</span> is not just deployed — it is engineered.</p>

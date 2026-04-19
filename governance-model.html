@@ -52,6 +52,16 @@
             top: 90%;
             transform: translateY(-90%);
         }
+
+        @media(max-width:768px) {
+            .sub-page-banner {
+                background-size: contain;
+                background-position: center 132%;
+            }
+        }
+        .featured-creator.tit h3{
+            line-height: 1.5;
+        }
     </style>
 </head>
 
@@ -64,7 +74,7 @@
     <div class="main">
 
         <!-- Subpage Banner Start -->
-        <section class="sub-page-banner gb">
+        <section class="sub-page-banner relative gb">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow fadeInUp animated">
@@ -86,7 +96,7 @@
             <section class="featured-creator tit botline primary-color pt-100 pb-70 relative">
                 <div class="container-fluid">
                     <div class="row flex-bottom pb-50 justify-content-center">
-                        <div class="col-md-8 wow fadeInLeft">
+                        <div class="col-md-12 col-lg-8 wow fadeInLeft">
                             <div class="heading-part text-center">
                                 <h3 class="color-gold mb-md-3 mb3">Structured Decentralization — Not Instant
                                     Distribution
@@ -267,7 +277,7 @@
             <div class="row inner-pgs-cont botline container-fluid primary-color pt-5 ptb-100 relative">
 
                 <section>
-                    <div class="l-cards">
+                    <div class="l-cards hm">
                         <!-- CARD 1 -->
                         <div class="c-card">
                             <div class="c-card__description hm botline">
@@ -297,7 +307,7 @@
                                     alt="Phase-Based Liquidity Architecture">
                             </figure>
                         </div>
-                        <div class="c-card">
+                        <div class="c-card gm1">
                             <figure class="c-card__figure">
                                 <img src="images/Governance_Treasury_Governance_Model_25.png"
                                     alt="Treasury Governance Model" style="">

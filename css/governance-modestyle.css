@@ -478,12 +478,62 @@
   }
 
   .pillars-stack {
-    max-width: 500px;
+    max-width: auto;
     margin: 0 auto;
   }
 
   .pillar {
     padding: 28px 32px 28px 72px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-card .c-card__description .c-card__tagline {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+   .c-card .c-card__description {
+    /* justify-content: flex-start; */
+    padding: 20px !important;
+    gap: 0rem;
+  }
+  .wallet-address{
+    font-size: 0.5rem;
+  }
+   .c-card {
+    max-height: 380px !important;
+  }
+   .c-card {
+    max-height: 440px !important;
+  }
+ .c-card .c-card__tagline{
+    padding: 0rem 2rem;
+  }
+  .c-card.gm11 .core-values p{
+    font-size:12px;
+  }
+  /* .row.inner-pgs-cont ul li {
+    padding-bottom: 0px !important;
+  } */
+    .c-card.gm11 .c-card__description .core-values {
+    margin-top: 0px !important;
+  }
+ .c-card .c-card__description .core-values {
+    margin-top: 0px !important;
+  }
+  .c-card .c-card__description .core-values ul {
+    padding-left: 0rem !important;
+  }
+ .c-card .c-card__description .core-values ul li {
+    font-size: 12px !important;
+  }
+ .c-card__description .gold.core-values p {
+    font-size: 12px !important;
+  }
+  .c-card__description .gold.core-values ul li::before {
+    top: 1px !important;
+    font-size: 18px !important;
+    left: 6px !important;
   }
 }
 
@@ -497,8 +547,45 @@
     height: 40px;
     font-size: 0.9rem;
   }
+  .c-card .c-card__description .c-card__tagline {
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+  .c-card .c-card__description {
+    /* justify-content: flex-start; */
+    padding: 20px;
+  }
+  .c-card {
+    max-height: 380px !important;
+  }
+  .c-card.gm1 {
+    max-height: 450px !important;
+  }
+  .row.inner-pgs-cont ul li {
+    padding-bottom: 0px;
+  }
+  .c-card .c-card__description .core-values {
+    margin-top: 6px;
+  }
+  .c-card .c-card__description .core-values ul {
+    padding-left: 0rem;
+  }
+  .c-card .c-card__description .core-values ul li {
+    font-size: 12px;
+  }
+  .c-card__description .gold.core-values p {
+    font-size: 12px;
+  }
+  .c-card__description .gold.core-values ul li::before {
+    top: 1px;
+    font-size: 18px;
+    left: 6px;
+  }
+  .sub-page-banner .container {
+    top: 120% !important;
+    transform: translateY(-120%) !important;
 }
-
+}
 .arr-1 .phases-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
@@ -530,22 +617,22 @@
   }
   .inner-pgs-cont {
     padding: 1.5rem;
-            width: 104vw;
+    width: 104vw;
   }
-  .c-card .c-card__description{
-        padding: 1rem !important;
+  .c-card .c-card__description {
+    padding: 1rem !important;
   }
   .c-card {
     min-width: 90vw;
   }
-  .c-card .c-card__description .c-card__tagline{
+  .c-card .c-card__description .c-card__tagline {
     font-size: 1rem;
     margin-bottom: 0px;
   }
   .c-card__description .core-values {
     margin-top: 16px;
   }
-  .governance-image img{
-        height: 270px;
+  .governance-image img {
+    height: 270px;
   }
 }

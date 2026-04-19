@@ -531,6 +531,121 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .l-cards.hm .c-card .c-card__description .c-card__tagline {
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+   .l-cards.hm .c-card .c-card__description {
+    /* justify-content: flex-start; */
+    padding: 20px !important;
+    gap: 0rem;
+  }
+  .l-cards.hm .wallet-address{
+    font-size: 0.5rem;
+  }
+  .l-cards.hm  .c-card {
+    max-height: 420px !important;
+  }
+   .l-cards.hm .c-card.gm11 {
+    max-height: 480px !important;
+  }
+  .l-cards.hm .c-card.gm11 .c-card__tagline{
+    padding: 0rem 2rem;
+  }
+  .l-cards.hm .c-card.gm11 .core-values p{
+    font-size:12px;
+  }
+  /* .row.inner-pgs-cont ul li {
+    padding-bottom: 0px !important;
+  } */
+    .l-cards.hm .c-card.gm11 .c-card__description .core-values {
+    margin-top: 0px !important;
+  }
+  .l-cards.hm .c-card .c-card__description .core-values {
+    margin-top: 0px !important;
+  }
+  .l-cards.hm .c-card .c-card__description .core-values ul {
+    padding-left: 0rem !important;
+  }
+  .l-cards.hm .c-card .c-card__description .core-values ul li {
+    font-size: 12px !important;
+  }
+  .l-cards.hm .c-card__description .gold.core-values p {
+    font-size: 12px !important;
+  }
+  .l-cards.hm .c-card__description .gold.core-values ul li::before {
+    top: 1px !important;
+    font-size: 18px !important;
+    left: 6px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .l-cards.hm .c-card .c-card__description .c-card__tagline {
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+   .l-cards.hm .c-card .c-card__description {
+    /* justify-content: flex-start; */
+    padding: 20px !important;
+    gap: 0rem;
+  }
+  .l-cards.hm .wallet-address{
+    font-size: 0.5rem;
+  }
+  .l-cards.hm  .c-card {
+    max-height: 380px !important;
+  }
+   .l-cards.hm .c-card.gm11 {
+    max-height: 450px !important;
+  }
+  .l-cards.hm .c-card.gm11 .c-card__tagline{
+    padding: 0rem 2rem;
+  }
+  .l-cards.hm .c-card.gm11 .core-values p{
+    font-size:12px;
+  }
+  /* .row.inner-pgs-cont ul li {
+    padding-bottom: 0px !important;
+  } */
+    .l-cards.hm .c-card.gm11 .c-card__description .core-values {
+    margin-top: 0px !important;
+  }
+  .l-cards.hm .c-card .c-card__description .core-values {
+    margin-top: 0px !important;
+  }
+  .l-cards.hm .c-card .c-card__description .core-values ul {
+    padding-left: 0rem !important;
+  }
+  .l-cards.hm .c-card .c-card__description .core-values ul li {
+    font-size: 12px !important;
+  }
+  .l-cards.hm .c-card__description .gold.core-values p {
+    font-size: 12px !important;
+  }
+  .l-cards.hm .c-card__description .gold.core-values ul li::before {
+    top: 1px !important;
+    font-size: 18px !important;
+    left: 6px !important;
+  }
+  .closing-web3{
+        padding: 60px 0%;
+  }
+  .feature-card{
+    padding: 18px;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+
+  }
+  .icon svg{
+    width: 24px;
+    height: 24px;
+  }
+}
+
 .zrz-stands.rs {
   background: linear-gradient(145deg, #0f172a 0%, #111a2f 100%);
   padding: 100px 0;

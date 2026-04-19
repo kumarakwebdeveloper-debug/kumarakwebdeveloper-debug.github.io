@@ -598,16 +598,38 @@ main {
   color: var(--text-main);
 }
 
+@media (max-width: 1120px) {
+  .section-split {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
 /* Responsive */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: minmax(0, 1fr);
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .hero-left h4 {
+    font-size: 24px;
+    line-height: 36px;
   }
 
   .hero-right {
     justify-content: flex-start;
   }
-
+  .hero-card {
+    max-width: 100%;
+  }
+  .videoblk {
+    height: 40vh !important;
+  }
+  .section-split {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .liquidity-infra.lsc {
+    width: 100%;
+  }
   .nav-links {
     display: none;
   }
@@ -925,8 +947,8 @@ main {
   }
 
   .liquidity-infra.lsc {
-        width: 100%;
-    }
+    width: 100% !important;
+  }
 
   .stat-main {
     font-size: 20px;
@@ -1168,8 +1190,8 @@ main {
   }
   #governance .section-col h2 {
     margin-bottom: 0 !important;
-}
-#governance .section-col .core-values {
+  }
+  #governance .section-col .core-values {
     margin-top: 16px;
-}
+  }
 }

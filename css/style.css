@@ -5734,8 +5734,12 @@ h5 {
     padding-left: 0px !important;
   }
   .sub-page-banner.relative {
-        height: 40vh !important;
-    }
+    height: 40vh !important;
+  }
+   .sub-page-banner .page-banner .sub-banner-title {
+    font-size: 24px !important;
+    line-height: 32px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -5900,8 +5904,8 @@ h5 {
   }
   /*------- SubPage Banner -------*/
   .sub-page-banner .page-banner .sub-banner-title {
-    font-size: 30px;
-    line-height: 42px;
+    font-size: 24px;
+    line-height: 32px;
     padding-bottom: 6px;
   }
   /*------- Connect Wallet Page -------*/
@@ -6009,35 +6013,35 @@ h5 {
   }
 }
 
-    .sub-banner-title {
-        opacity: 0;
-        transform: translateY(40px);
-        will-change: transform, opacity;
-    }
+.sub-banner-title {
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: transform, opacity;
+}
 
-    .sub-banner-title.animate {
-        animation: slideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    }
+.sub-banner-title.animate {
+  animation: slideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
 
-    @keyframes slideUp {
-        0% {
-            opacity: 0;
-            transform: translateY(40px);
-        }
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
 
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 575px) {
   /*------- Spacer Style  -------*/
   .pb-50 {
     padding-bottom: 30px;
   }
-    #myVideo{
-        top: 80% !important;
+  #myVideo {
+    top: 80% !important;
   }
   /*------- Header -------*/
 
@@ -6185,8 +6189,15 @@ h5 {
     height: 340px !important;
   }
   .wallet-address {
-    font-size: 0.5rem !important;
+    font-size: 0.45rem !important;
   }
+
+  .sub-page-banner.relative .container {
+    top: 110% !important;
+    transform: translateY(-1%) !important;
+    bottom: 1% !important;
+  }
+
 
   .faq .faq-box .faq-panel {
     overflow-x: auto;
@@ -6473,8 +6484,8 @@ h5 {
   }
   .c-card.zrmn .c-card__description .c-card__tagline {
     font-size: 1rem;
-    margin-bottom: 10px;
-    padding-left: 20px;
+    margin-bottom: 14px;
+    /* padding-left: 20px; */
   }
   .resps.core-values ul {
     padding-left: 0;
@@ -6536,6 +6547,17 @@ h5 {
   }
 }
 
+@media(max-width:400px){
+  .sub-page-banner.relative.mbrsp, .sub-page-banner.relative {
+    height: 50vh !important;
+
+  }
+    .sub-page-banner.relative .container {
+    /* top: 90% !important; */
+    transform: translateY(-1%) !important;
+    bottom: 1% !important;
+  }
+}
 :root {
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;

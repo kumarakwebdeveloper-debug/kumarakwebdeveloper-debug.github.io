@@ -147,6 +147,18 @@
                 background-position: center -79%;
             }
         }
+        @media(max-width:1024px) {
+            
+
+            .sub-page-banner .container {
+                top: 187% !important;
+                transform: translateY(-187%) !important;
+            }
+
+            /* .resp h4{
+                font-size:26px;
+            } */
+        }
 
         @media(max-width:768px) {
             .sub-page-banner.relative {
@@ -163,9 +175,22 @@
                 object-fit: contain;
             }
 
+            .sub-page-banner .container {
+                top: 140% !important;
+                transform: translateY(-140%) !important;
+            }
+
             /* .resp h4{
                 font-size:26px;
             } */
+        }
+
+        @media (max-width: 575px) {
+            .sub-page-banner.relative .container {
+                top: 115% !important;
+                transform: translateY(-1%) !important;
+                bottom: 1% !important;
+            }
         }
     </style>
 </head>
@@ -178,7 +203,7 @@
     <div class="main">
 
         <!-- Subpage Banner Start -->
-        <section class="sub-page-banner relative">
+        <section class="sub-page-banner mbrsp relative">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -199,7 +224,8 @@
                         <h3 class="color-gold mb-md-4 text-center">Engineering the Intelligent Backbone
                             of <span class="ethno">ZacrocoZ</span></h3>
                         <div class="core-values mt-3">
-                            <p class="mb-md-3"><span class="ethno">ZacrocoZ</span> is built on a secure, scalable, and AI-enhanced
+                            <p class="mb-md-3"><span class="ethno">ZacrocoZ</span> is built on a secure, scalable, and
+                                AI-enhanced
                                 blockchain architecture designed to deliver transparency, efficiency, and long-term
                                 sustainability. </p>
                             <p>Every layer of the ecosystem — from smart contracts to governance logic

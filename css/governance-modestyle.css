@@ -535,6 +535,10 @@
     font-size: 18px !important;
     left: 6px !important;
   }
+  .sub-page-banner .container {
+                top: 195% !important;
+                transform: translateY(-195%) !important;
+            }
 }
 
 @media (max-width: 768px) {
@@ -585,6 +589,10 @@
     top: 120% !important;
     transform: translateY(-120%) !important;
 }
+ .sub-page-banner .container {
+                top: 148% !important;
+                transform: translateY(-148%) !important;
+            }
 }
 .arr-1 .phases-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -635,4 +643,12 @@
   .governance-image img {
     height: 270px;
   }
+}
+
+@media (max-width: 575px) {
+    .sub-page-banner.relative .container {
+        top: 94% !important;
+        transform: translateY(-1%) !important;
+        bottom: 1% !important;
+    }
 }

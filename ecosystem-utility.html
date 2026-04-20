@@ -94,6 +94,13 @@
             transform: translateY(-40%);
         }
 
+        @media(max-width:1024px) {
+
+            .sub-page-banner .container {
+                top: 130% !important;
+                transform: translateY(-130%) !important;
+            }
+        }
         @media(max-width:768px) {
             section.zrz-stands section {
                 padding: 30px 0px;
@@ -104,8 +111,16 @@
             }
 
             .sub-page-banner .container {
-                top: 60% !important;
-                transform: translateY(-60%) !important;
+                top: 90% !important;
+                transform: translateY(-90%) !important;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .sub-page-banner.relative .container {
+                top: 80% !important;
+                transform: translateY(-1%) !important;
+                bottom: 1% !important;
             }
         }
     </style>
@@ -116,9 +131,9 @@
     <div class="main">
 
         <!-- Subpage Banner Start -->
-        <section class="sub-page-banner botline relative">
+        <section class="sub-page-banner mbrsp botline relative">
             <video autoplay muted loop id="myVideo">
-                <source src="images/ecosystem-banner-video.mp4" type="video/mp4">
+                <source src="images/ecosystem-banner-video_1.mp4" type="video/mp4">
             </video>
             <div class="container">
                 <div class="row">

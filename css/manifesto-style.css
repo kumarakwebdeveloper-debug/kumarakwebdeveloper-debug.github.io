@@ -174,42 +174,42 @@
     font-size: 1rem;
     margin-bottom: 10px;
   }
-   .c-card .c-card__description {
+  .c-card .c-card__description {
     /* justify-content: flex-start; */
     padding: 20px !important;
     gap: 0rem;
   }
-  .wallet-address{
+  .wallet-address {
     font-size: 0.5rem;
   }
-   .c-card {
+  .c-card {
     max-height: 380px !important;
   }
-   .c-card {
+  .c-card {
     max-height: 440px !important;
   }
- .c-card .c-card__tagline{
+  .c-card .c-card__tagline {
     padding: 0rem 2rem;
   }
-  .c-card.gm11 .core-values p{
-    font-size:12px;
+  .c-card.gm11 .core-values p {
+    font-size: 12px;
   }
   /* .row.inner-pgs-cont ul li {
     padding-bottom: 0px !important;
   } */
-    .c-card.gm11 .c-card__description .core-values {
+  .c-card.gm11 .c-card__description .core-values {
     margin-top: 0px !important;
   }
- .c-card .c-card__description .core-values {
+  .c-card .c-card__description .core-values {
     margin-top: 0px !important;
   }
   .c-card .c-card__description .core-values ul {
     padding-left: 0rem !important;
   }
- .c-card .c-card__description .core-values ul li {
+  .c-card .c-card__description .core-values ul li {
     font-size: 12px !important;
   }
- .c-card__description .gold.core-values p {
+  .c-card__description .gold.core-values p {
     font-size: 12px !important;
   }
   .c-card__description .gold.core-values ul li::before {
@@ -217,13 +217,13 @@
     font-size: 18px !important;
     left: 6px !important;
   }
+  .sub-page-banner .container {
+    top: 220% !important;
+    transform: translateY(-220%) !important;
+  }
 }
 
 @media (max-width: 768px) {
-  .sub-page-banner .container {
-    top: 70% !important;
-    transform: translateY(-70%) !important;
-  }
   .c-card .c-card__description .c-card__tagline {
     font-size: 1rem;
     margin-bottom: 0px;
@@ -257,5 +257,25 @@
     top: 1px;
     font-size: 18px;
     left: 6px;
+  }
+  .sub-page-banner .container {
+    top: 113% !important;
+    transform: translateY(-113%) !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .sub-page-banner.relative.mbrsp .container {
+    top: 74% !important;
+    transform: translateY(-1%) !important;
+    bottom: 1% !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .sub-page-banner.relative.mbrsp .container {
+    top: 81% !important;
+    transform: translateY(-1%) !important;
+    bottom: 1% !important;
   }
 }

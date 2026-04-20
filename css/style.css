@@ -6009,6 +6009,28 @@ h5 {
   }
 }
 
+    .sub-banner-title {
+        opacity: 0;
+        transform: translateY(40px);
+        will-change: transform, opacity;
+    }
+
+    .sub-banner-title.animate {
+        animation: slideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    @keyframes slideUp {
+        0% {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
 @media (max-width: 575px) {
   /*------- Spacer Style  -------*/
   .pb-50 {

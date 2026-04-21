@@ -55,13 +55,6 @@
   }
 
 }
-
-@media (max-width: 1024px) {
- .sub-page-banner .container {
-                top: 180% !important;
-                transform: translateY(-180%) !important;
-            }
-          }
 /* Responsive text tuning */
 @media (max-width: 768px) {
   .col-md-6.p-0 {
@@ -91,10 +84,6 @@
     max-height: 340px;
     width: 100%;
   }
-   .sub-page-banner .container {
-                top: 140% !important;
-                transform: translateY(-140%) !important;
-            }
 }
 
 .gold.core-values {

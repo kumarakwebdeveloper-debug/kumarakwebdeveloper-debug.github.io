@@ -260,19 +260,7 @@
     background-position: center !important; */
   }
 }
-@media (max-width: 1024px) {
-    .sub-page-banner .container {
-        top: 180% !important;
-        transform: translateY(-180%) !important;
-    }
-}
 
-@media (max-width: 768px) {
-    .sub-page-banner .container {
-        top: 140% !important;
-        transform: translateY(-140%) !important;
-    }
-}
 @media (max-width: 576px) {
   .sub-page-banner.relative {
     height: 38vh !important;

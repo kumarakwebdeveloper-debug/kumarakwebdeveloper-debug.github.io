@@ -112,12 +112,13 @@
             min-height: 400px;
         }
 
-        .hero-image video {
+        .hero-image video#myVideo {
             width: 100%;
             height: 500px;
             object-fit: cover;
             display: block;
             border-radius: 12px;
+            position: relative !important;
         }
 
         @media(max-width:576px) {
@@ -132,12 +133,6 @@
             border-radius: 4px;
         }
 
-        .sub-page-banner .container {
-            z-index: 99999;
-            top: 90%;
-            transform: translateY(-90%);
-        }
-
         @media(max-width:1120px) {
             .resp h4 {
                 font-size: 26px;
@@ -146,18 +141,6 @@
             .sub-page-banner.relative {
                 background-position: center -79%;
             }
-        }
-        @media(max-width:1024px) {
-            
-
-            .sub-page-banner .container {
-                top: 187% !important;
-                transform: translateY(-187%) !important;
-            }
-
-            /* .resp h4{
-                font-size:26px;
-            } */
         }
 
         @media(max-width:768px) {
@@ -173,23 +156,6 @@
             .hero-image video {
                 height: 380px;
                 object-fit: contain;
-            }
-
-            .sub-page-banner .container {
-                top: 140% !important;
-                transform: translateY(-140%) !important;
-            }
-
-            /* .resp h4{
-                font-size:26px;
-            } */
-        }
-
-        @media (max-width: 575px) {
-            .sub-page-banner.relative .container {
-                top: 115% !important;
-                transform: translateY(-1%) !important;
-                bottom: 1% !important;
             }
         }
     </style>

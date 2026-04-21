@@ -49,7 +49,7 @@
             color: #c7ccd1;
         }
 
-        .sub-page-banner,
+        /* .sub-page-banner,
         .videoblk {
             position: relative;
             height: 50vh;
@@ -58,49 +58,10 @@
             align-items: center;
             justify-content: center;
             background: #0f172a;
-        }
+        } */
 
-        #myVideo,
-        #smbanner {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            z-index: 1;
-        }
+        
 
-        .sub-page-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg,
-                    rgba(15, 23, 42, 0.9) 0%,
-                    rgba(26, 32, 44, 0.95) 70%,
-                    rgba(212, 175, 55, 0.2) 100%);
-            z-index: 2;
-        }
-
-        .sub-page-banner .container {
-            z-index: 99999;
-            top: 40%;
-            transform: translateY(-40%);
-        }
-
-        @media(max-width:1024px) {
-
-            .sub-page-banner .container {
-                top: 130% !important;
-                transform: translateY(-130%) !important;
-            }
-        }
         @media(max-width:768px) {
             section.zrz-stands section {
                 padding: 30px 0px;
@@ -108,19 +69,6 @@
 
             .ptb-100 {
                 padding-top: 0px;
-            }
-
-            .sub-page-banner .container {
-                top: 90% !important;
-                transform: translateY(-90%) !important;
-            }
-        }
-
-        @media (max-width: 575px) {
-            .sub-page-banner.relative .container {
-                top: 80% !important;
-                transform: translateY(-1%) !important;
-                bottom: 1% !important;
             }
         }
     </style>

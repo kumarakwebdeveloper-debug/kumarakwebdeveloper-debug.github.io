@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link type="image/x-icon" href="images/logo-icons/PNG/32px flat.png" rel="icon">
 
     <!-- Bootstrap 5 CDN -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -27,6 +28,15 @@
     .btn-loading {
         pointer-events: none;
         opacity: 0.7;
+    }
+
+    #captchaCode {
+        background: transparent;
+        padding: 10px;
+        display: inline-block;
+        border-radius: 5px;
+        user-select: none;
+        border: 1px solid #36352d;
     }
 </style>
 
@@ -48,11 +58,9 @@
             </div>
         </section>
 
-        <!-- 4 Contacts - Bootstrap ROW with col-md-3 -->
         <section class="contacts pt-100">
             <h2 class="text-center">Contact Channels</h2>
             <div class="row g-4">
-                <!-- Box 1 -->
                 <div class="col-sm-6">
                     <div class="contact-card h-100">
                         <i class="fas fa-envelope contact-icon"></i>
@@ -64,7 +72,6 @@
                     </div>
                 </div>
 
-                <!-- Box 2 -->
                 <div class="col-sm-6">
                     <div class="contact-card h-100">
                         <i class="fas fa-tools contact-icon"></i>
@@ -75,7 +82,6 @@
                     </div>
                 </div>
 
-                <!-- Box 3 -->
                 <div class="col-sm-6">
                     <div class="contact-card h-100">
                         <i class="fas fa-users contact-icon"></i>
@@ -85,7 +91,6 @@
                     </div>
                 </div>
 
-                <!-- Box 4 -->
                 <div class="col-sm-6">
                     <div class="contact-card h-100">
                         <i class="fas fa-handshake contact-icon"></i>
@@ -131,21 +136,19 @@
 
         <div class="container-fluid ctform px-4 pt-5 d-flex align-items-center">
             <div class="container">
-                <!-- Hero -->
                 <div class="text-center pb-5">
                     <h3 class="mb-3 color-gold">GET IN TOUCH</h3>
                     <p class="lead mb-0">Connect with <span class="ethno">ZacrocoZ</span> Team</p>
                 </div>
 
-                <!-- Contact Form -->
                 <div class="row justify-content-center">
                     <div class="col-md-9">
                         <form id="contactForm" class="contact-form">
 
-                            <input type="hidden" name="access_key" value="2d1681f0-2443-4509-a415-8c94401a5250">
+                            <!-- <input type="hidden" name="access_key" value="2d1681f0-2443-4509-a415-8c94401a5250"> -->
 
                             <input type="hidden" name="subject" value="New Contact Form Submission">
-
+                            <input type="checkbox" name="botcheck" style="display:none;">
                             <input type="hidden" name="from_name" value="Zacrocoz Website">
 
                             <div class="row g-4 mb-4">
@@ -184,7 +187,6 @@
 
                                 <div class="col-md-6">
                                     <div class="form-floating form-floating-custom position-relative">
-                                        <!-- FIXED type=text -->
                                         <input type="text" class="form-control" id="country" name="country"
                                             placeholder="Country name" required>
                                         <label for="country">
@@ -203,6 +205,20 @@
                                         <label for="state">
                                             <i class="fas fa-map-marker-alt me-2"></i>State/Province
                                         </label>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Enter the Captcha</label>
+                                    <div class="row align-items-center">
+                                        <div class="col-md-9">
+                                            <input type="text" id="captchaInput" class="form-control mt-2"
+                                                placeholder="Enter 6-digit code" required>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div id="captchaCode"
+                                                style="font-size: 14px; font-weight: bold; letter-spacing: 2px;"></div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -232,7 +248,6 @@
                     </div>
                 </div>
 
-                <!-- Success/Error Messages -->
                 <div id="formMessage" class="row justify-content-center mt-4" style="display: none;">
                     <div class="col-lg-8">
                         <div class="alert alert-success alert-custom shadow-lg" role="alert" id="successMsg">
@@ -249,21 +264,42 @@
             </div>
         </div>
 
-        <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
         <script>
+            let generatedCaptcha = "";
+
+            function generateCaptcha() {
+                generatedCaptcha = Math.floor(100000 + Math.random() * 900000).toString();
+                document.getElementById("captchaCode").innerText = generatedCaptcha;
+            }
+
+            generateCaptcha();
+
             const form = document.getElementById("contactForm");
-            const btn = document.getElementById("submitBtn");
-            const btnText = document.getElementById("btnText");
-            const spinner = document.getElementById("btnSpinner");
 
             form.addEventListener("submit", async function (e) {
                 e.preventDefault();
 
+                const userInput = document.getElementById("captchaInput").value;
+
+                if (userInput !== generatedCaptcha) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Invalid Code',
+                        text: 'Please enter the correct 6-digit code.'
+                    });
+
+                    generateCaptcha();
+                    return;
+                }
+
                 const formData = new FormData(form);
 
-                // 🔄 Show loading state
+                const btn = document.getElementById("submitBtn");
+                const btnText = document.getElementById("btnText");
+                const spinner = document.getElementById("btnSpinner");
+
                 btn.classList.add("btn-loading");
                 spinner.classList.remove("d-none");
                 btnText.innerText = "Sending...";
@@ -281,8 +317,9 @@
                         Swal.fire({
                             icon: 'success',
                             title: 'Message Sent!',
-                            text: 'We will contact you soon.',
-                            confirmButtonColor: '#3085d6'
+                            text: 'Thank you! Our team will get back to you shortly.'
+                        }).then(() => {
+                            location.reload();
                         });
 
                         form.reset();
@@ -290,7 +327,7 @@
                         Swal.fire({
                             icon: 'error',
                             title: 'Failed',
-                            text: result.message || 'Something went wrong!',
+                            text: result.message || 'Something went wrong!'
                         });
                     }
 
@@ -298,11 +335,10 @@
                     Swal.fire({
                         icon: 'error',
                         title: 'Network Error',
-                        text: 'Please try again later.',
+                        text: 'Please try again later.'
                     });
                 }
 
-                // 🔁 Reset button state
                 btn.classList.remove("btn-loading");
                 spinner.classList.add("d-none");
                 btnText.innerText = "Send Message";

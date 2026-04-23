@@ -34,9 +34,27 @@
         position: relative;
         z-index: 999;
     }
-</style>
-
-<style>
+    .videoblk {
+        position: relative;
+        height: 60vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0f172a;
+    }
+    #smbanner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        z-index: 1;
+    }
     .sub-page-banner::before {
         content: '';
         position: absolute;

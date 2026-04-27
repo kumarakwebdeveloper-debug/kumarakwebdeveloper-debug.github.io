@@ -147,6 +147,9 @@
 
                             <input type="hidden" name="access_key" value="2d1681f0-2443-4509-a415-8c94401a5250">
 
+                            <input type="hidden" name="replyto" id="replyto">
+                            <input type="hidden" name="template" value="table">
+                            
                             <input type="hidden" name="subject" value="New Contact Form Submission">
                             <input type="checkbox" name="botcheck" style="display:none;">
                             <input type="hidden" name="from_name" value="Zacrocoz Website">
@@ -294,7 +297,10 @@
                     return;
                 }
 
+                const emailValue = document.getElementById("email").value;
+
                 const formData = new FormData(form);
+                formData.append("replyto", emailValue);
 
                 const btn = document.getElementById("submitBtn");
                 const btnText = document.getElementById("btnText");

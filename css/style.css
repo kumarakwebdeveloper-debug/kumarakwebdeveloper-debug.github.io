@@ -3096,6 +3096,57 @@ h5 {
   z-index: 9;
 }
 
+
+
+.custom-modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+
+/* Modal box */
+.custom-modal-content {
+  background: #0f172a;
+  width: 460px;
+  padding: 25px;
+  border-radius: 10px;
+  /* text-align: center; */
+
+  position: absolute;
+  left: 50%;
+  top: -200px;
+  transform: translateX(-50%);
+  
+  transition: all 0.4s ease;
+  border: 1px solid #d4af37;
+}
+
+/* When active */
+.custom-modal.show .custom-modal-content {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-actions .mybtn {
+    padding: 5px 30px !important;
+    margin-right: 20px;
+}
+
+.modal-actions .mybtn.mybtn-2 {
+    background: transparent;
+    border: 1px solid #d4af37;
+}
+
+.custom-modal-content .wallet-address{
+  font-size: 0.75rem;
+}
+
 /*------- Blog Section 2 -------*/
 .our-blog-2 .bg-pattern .pattern {
   position: absolute;

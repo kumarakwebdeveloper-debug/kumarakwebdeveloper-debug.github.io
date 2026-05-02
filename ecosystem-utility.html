@@ -4,8 +4,8 @@
 <head>
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <title>ZacrocoZ</title>
     <!-- Mobile Specific Metas -->
+    <title>ZacrocoZ || Ecosystem Utility</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link type="image/x-icon" href="images/logo-icons/PNG/32px flat.png" rel="icon">
 
@@ -17,39 +17,40 @@
     <link rel="stylesheet" type="text/css" href="css/new-style.css">
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <style>
-        .zrz-stands.apart {
-            background: url('images/bg-1.webp');
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: top right;
-            position: relative;
-        }
+</head>
+<style>
+    .zrz-stands.apart {
+        background: url('images/bg-1.webp');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top right;
+        position: relative;
+    }
 
-        .nav-pills .nav-link.active,
-        .nav-pills .show>.nav-link {
-            background-color: #d4af37cf;
-        }
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        background-color: #d4af37cf;
+    }
 
-        .zrz-stands.nbg {
-            background: #0f172a !important;
-        }
+    .zrz-stands.nbg {
+        background: #0f172a !important;
+    }
 
-        .card ul li {
-            padding-bottom: 10px;
-        }
+    .card ul li {
+        padding-bottom: 10px;
+    }
 
-        .w-70 {
-            width: 80%;
-        }
+    .w-70 {
+        width: 80%;
+    }
 
-        p {
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: #c7ccd1;
-        }
+    p {
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: #c7ccd1;
+    }
 
-        /* .sub-page-banner,
+    /* .sub-page-banner,
         .videoblk {
             position: relative;
             height: 50vh;
@@ -60,19 +61,18 @@
             background: #0f172a;
         } */
 
-        
 
-        @media(max-width:768px) {
-            section.zrz-stands section {
-                padding: 30px 0px;
-            }
 
-            .ptb-100 {
-                padding-top: 0px;
-            }
+    @media(max-width:768px) {
+        section.zrz-stands section {
+            padding: 30px 0px;
         }
-    </style>
-</head>
+
+        .ptb-100 {
+            padding-top: 0px;
+        }
+    }
+</style>
 
 <body>
     <div id="header"></div>
@@ -185,15 +185,9 @@
                     position: absolute;
                     inset: 0;
                     border-radius: 12px;
-
-                    background: radial-gradient(circle at 20% 20%,
-                            rgba(250, 204, 21, 0.15),
-                            transparent 60%);
-
+                    background: radial-gradient(circle at 20% 20%, rgba(250, 204, 21, 0.15), transparent 60%);
                     opacity: 0.6;
                 }
-
-
 
                 .card {
                     background: #0f172a;
@@ -220,7 +214,6 @@
 
                     z-index: 0;
                     opacity: 0.25;
-                    /* important: keep subtle */
                 }
 
                 .zrz-stands .row,
@@ -231,6 +224,10 @@
 
                 .core-values p {
                     color: #c7ccd1;
+                }
+
+                #crypto-bg {
+                    pointer-events: none;
                 }
             </style>
 
@@ -383,55 +380,60 @@
             <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
             <script>
                 const canvas = document.getElementById("crypto-bg");
-                const ctx = canvas.getContext("2d");
 
-                let w, h;
+                if (canvas) {
+                    const ctx = canvas.getContext("2d");
 
-                function resize() {
-                    w = canvas.width = canvas.offsetWidth;
-                    h = canvas.height = canvas.offsetHeight;
+                    let w, h;
+
+                    function resize() {
+                        w = canvas.width = canvas.offsetWidth;
+                        h = canvas.height = canvas.offsetHeight;
+                    }
+
+                    resize();
+                    window.addEventListener("resize", resize);
+
+                    const boxes = [];
+
+                    for (let i = 0; i < 100; i++) {
+                        boxes.push({
+                            x: Math.random() * w,
+                            y: -Math.random() * h,
+                            size: 15 + Math.random() * 25,
+                            speedY: 1 + Math.random() * 2,
+                            swaySpeed: 0.02 + Math.random() * 0.03,
+                            swayOffset: Math.random() * Math.PI * 2,
+                            color: Math.random() > 0.7 ? "#f59e0b" : (Math.random() > 0.5 ? "#22c55e" : "#ef4444")
+                        });
+                    }
+
+                    function animate() {
+                        ctx.clearRect(0, 0, w, h);
+
+                        boxes.forEach(box => {
+                            ctx.fillStyle = box.color;
+                            ctx.globalAlpha = 0.5 + Math.random() * 0.2;
+                            ctx.shadowBlur = 8;
+                            ctx.shadowColor = box.color;
+
+                            box.x += Math.sin(Date.now() * box.swaySpeed + box.swayOffset) * 0.5;
+                            box.y += box.speedY;
+                            box.x = (box.x + w) % w;
+
+                            ctx.fillRect(box.x - box.size / 2, box.y - box.size / 2, box.size, box.size);
+
+                            if (box.y > h + box.size) {
+                                box.y = -box.size;
+                                box.x = Math.random() * w;
+                            }
+                        });
+
+                        requestAnimationFrame(animate);
+                    }
+
+                    animate();
                 }
-                resize();
-                window.addEventListener("resize", resize);
-
-                const boxes = [];
-
-                for (let i = 0; i < 100; i++) {
-                    boxes.push({
-                        x: Math.random() * w,
-                        y: -Math.random() * h,
-                        size: 15 + Math.random() * 25,
-                        speedY: 1 + Math.random() * 2,
-                        swaySpeed: 0.02 + Math.random() * 0.03,
-                        swayOffset: Math.random() * Math.PI * 2,
-                        color: Math.random() > 0.7 ? "#f59e0b" : (Math.random() > 0.5 ? "#22c55e" : "#ef4444")
-                    });
-                }
-
-                function animate() {
-                    ctx.clearRect(0, 0, w, h);
-
-                    boxes.forEach(box => {
-                        ctx.fillStyle = box.color;
-                        ctx.globalAlpha = 0.5 + Math.random() * 0.2;
-                        ctx.shadowBlur = 8;
-                        ctx.shadowColor = box.color;
-
-                        box.x += Math.sin(Date.now() * box.swaySpeed + box.swayOffset) * 0.5;
-                        box.y += box.speedY;
-                        box.x = (box.x + w) % w;
-
-                        ctx.fillRect(box.x - box.size / 2, box.y - box.size / 2, box.size, box.size);
-
-                        if (box.y > h + box.size) {
-                            box.y = -box.size;
-                            box.x = Math.random() * w;
-                        }
-                    });
-
-                    requestAnimationFrame(animate);
-                }
-                animate();
             </script>
         </div>
 
@@ -448,7 +450,8 @@
         </script>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/txt-copy.js"></script>
+
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
@@ -465,13 +468,12 @@
             myVideo.playbackRate = 0.5;
         });
     </script>
-    <script>
+    <!-- <script>
         fetch('header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
 
-                // ✅ ACTIVE MENU
                 const currentPage = window.location.pathname.split("/").pop();
                 const menuLinks = document.querySelectorAll(".nav-menu a");
 
@@ -488,12 +490,10 @@
                     }
                 });
 
-                // ✅ IMPORTANT: RE-BIND EVENTS AFTER LOAD
                 bindMenuEvents();
             });
 
 
-        // ✅ FUNCTION TO BIND EVENTS
         function bindMenuEvents() {
 
             $(".menu-toggle").click(function () {
@@ -519,7 +519,34 @@
             });
 
         }
+    </script> -->
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+
+                const currentPage = window.location.pathname.split("/").pop();
+
+                const menuLinks = document.querySelectorAll(".nav-menu a");
+
+                menuLinks.forEach(link => {
+                    const linkPage = link.getAttribute("href");
+
+                    link.classList.remove("active");
+
+                    if (
+                        linkPage === currentPage ||
+                        (currentPage === "" && linkPage === "index.html")
+                    ) {
+                        link.classList.add("active");
+                    }
+                });
+            });
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="js/lang_translator.js"></script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 

@@ -419,3 +419,45 @@ $(function () {
     });
   }
 });
+
+{
+  /* <script> */
+}
+
+// BUY ZRZ Modal
+
+document.addEventListener("click", function (e) {
+  const modal = document.getElementById("buyModal");
+
+  if (e.target.closest("#buyBtn")) {
+    e.preventDefault();
+
+    modal.style.display = "block";
+
+    setTimeout(() => {
+      modal.classList.add("show");
+    }, 10);
+  }
+
+  if (e.target.closest("#closeModal")) {
+    modal.classList.remove("show");
+
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 300);
+  }
+
+  if (e.target === modal) {
+    modal.classList.remove("show");
+
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 300);
+  }
+
+  if (e.target.closest("#confirmBuy")) {
+    window.open("https://pancakeswap.finance/swap?outputCurrency=0x4cFa773Df72A3cCB89cb643Ad4c2A9b9F1692F5A",
+      "_blank",
+    );
+  }
+});

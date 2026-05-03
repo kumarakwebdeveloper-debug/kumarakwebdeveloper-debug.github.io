@@ -3096,17 +3096,15 @@ h5 {
   z-index: 9;
 }
 
-
-
 .custom-modal {
   display: none;
   position: fixed;
-  z-index: 99999;
+  z-index: 999999;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   overflow: hidden;
 }
 
@@ -3122,7 +3120,7 @@ h5 {
   left: 50%;
   top: -200px;
   transform: translateX(-50%);
-  
+
   transition: all 0.4s ease;
   border: 1px solid #d4af37;
 }
@@ -3134,16 +3132,16 @@ h5 {
 }
 
 .modal-actions .mybtn {
-    padding: 5px 30px !important;
-    margin-right: 20px;
+  padding: 5px 30px !important;
+  margin-right: 20px;
 }
 
 .modal-actions .mybtn.mybtn-2 {
-    background: transparent;
-    border: 1px solid #d4af37;
+  background: transparent;
+  border: 1px solid #d4af37;
 }
 
-.custom-modal-content .wallet-address{
+.custom-modal-content .wallet-address {
   font-size: 0.75rem;
 }
 
@@ -5404,6 +5402,7 @@ h5 {
     flex-direction: column;
     -webkit-box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.1);
     box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.1);
+    z-index: 1000;
   }
   .header .main-menu .connect-wallet {
     margin-left: 0px;
@@ -5786,7 +5785,7 @@ h5 {
     font-size: 28px !important;
     line-height: 32px;
   }
-   .header .nav-menu > ul > li > a {
+  .header .nav-menu > ul > li > a {
     text-align: left;
   }
 }
@@ -6209,6 +6208,18 @@ h5 {
   .pillar.hm {
     width: 100%;
   }
+
+  .custom-modal.show .custom-modal-content {
+    top: 30%;
+    transform: translate(-50%, -30%);
+  }
+
+  .custom-modal-content {
+    width: 360px;
+  }
+  .custom-modal-content .wallet-address {
+    font-size: 0.5rem !important;
+  }
   /*------- Connect Wallet Page -------*/
   .activity-filter .filter-btn li a {
     min-width: 150px;
@@ -6240,7 +6251,6 @@ h5 {
   .wallet-address {
     font-size: 0.45rem !important;
   }
-
 
   .faq .faq-box .faq-panel {
     overflow-x: auto;
@@ -6646,7 +6656,11 @@ h5 {
   .sub-page-banner.relative {
     height: 50vh !important;
   }
-
+}
+@media (max-width: 380px) {
+  .custom-modal-content {
+    width: 330px;
+  }
 }
 :root {
   --bg-primary: #0f172a;

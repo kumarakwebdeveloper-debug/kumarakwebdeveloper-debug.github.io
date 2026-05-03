@@ -81,3 +81,35 @@ function showCopiedTooltip(element) {
     tooltip.hide();
   }, 2500);
 }
+
+
+
+
+
+
+document.addEventListener("click", function (e) {
+
+  if (e.target.closest("#buyBtn")) {
+    e.preventDefault();
+
+    const menu = document.querySelector(".main-menu");
+    const toggle = document.querySelector(".menu-toggle");
+
+    if (menu && menu.classList.contains("active")) {
+      menu.classList.remove("active");
+    }
+
+    if (toggle && toggle.classList.contains("active")) {
+      toggle.classList.remove("active");
+    }
+
+    const modal = document.getElementById("buyModal");
+
+    modal.style.display = "block";
+
+    setTimeout(() => {
+      modal.classList.add("show");
+    }, 10);
+  }
+
+});

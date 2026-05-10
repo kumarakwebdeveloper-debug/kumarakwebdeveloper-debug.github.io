@@ -4,11 +4,59 @@
 <head>
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <title>ZacrocoZ || Privacy Policy</title>
-
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link type="image/x-icon" href="images/logo-icons/PNG/32px flat.png" rel="icon">
+    <title>ZacrocoZ || Privacy Policy</title>
+
+    <meta name="title" content="ZacrocoZ || Privacy Policy">
+
+    <!-- PRIVACY POLICY -->
+    <meta name="description"
+        content="Read the ZacrocoZ Privacy Policy explaining how user information, website interactions, security measures, and data handling practices are managed within the ecosystem.">
+
+    <meta name="keywords"
+        content="ZacrocoZ, ZRZ Token, ZacrocoZ Token, ZRZ Coin, ZacrocoZ Crypto, BNB Chain Token, BEP20 Token, Blockchain Ecosystem, Structured Blockchain, Transparent Blockchain Project, Decentralized Ecosystem, AI Integrated Blockchain, Multi Signature Treasury, Secure Crypto Project, Phased Liquidity Model, Zero Tax Token, Fixed Supply Token, Blockchain Transparency, Smart Contract Security, Long Term Crypto Project">
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ZacrocoZ">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <meta name="theme-color" content="#0f172a">
+    <meta name="msapplication-TileColor" content="#0f172a">
+    <link rel="canonical" href="https://zacrocoz.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zacrocoz.com/">
+    <meta property="og:title" content="ZacrocoZ (ZRZ) | Transparent Blockchain Ecosystem">
+    <meta property="og:description"
+        content="Discover ZacrocoZ (ZRZ), a transparent BEP20 blockchain ecosystem powered by structured liquidity, AI integration, decentralized infrastructure, and secure treasury management on BNB Chain.">
+    <meta property="og:image" content="https://zacrocoz.com/images/seo-banner.png">
+    <meta property="og:site_name" content="ZacrocoZ">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://zacrocoz.com/">
+    <meta name="twitter:title" content="ZacrocoZ (ZRZ) | Transparent Blockchain Ecosystem">
+    <meta name="twitter:description"
+        content="ZRZ Token powers the ZacrocoZ ecosystem with transparent blockchain infrastructure, fixed supply tokenomics, secure treasury systems, and decentralized long-term ecosystem growth.">
+
+    <meta name="twitter:image" content="https://zacrocoz.com/images/seo-banner.png">
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ZacrocoZ",
+        "url": "https://zacrocoz.com",
+        "logo": "https://zacrocoz.com/images/logo-main.png",
+        "sameAs": [
+            "https://bscscan.com/token/0x4cFa773Df72A3cCB89cb643Ad4c2A9b9F1692F5A",
+            "https://pancakeswap.finance/swap?outputCurrency=0x4cFa773Df72A3cCB89cb643Ad4c2A9b9F1692F5A&chain=bsc",
+            "https://dexscreener.com/bsc/0xb4d247b9cd3cf32860376566c3e02004f4484a79"
+        ]
+        }
+    </script>
+
 
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
@@ -96,16 +144,19 @@
         .heading-part .sub-title.bn::after {
             background-color: transparent !important;
         }
-         @media (max-width: 1120px) {
+
+        @media (max-width: 1120px) {
             .about-us.pp {
                 height: 54vh;
             }
+
             .about-us.pp .container-fluid {
                 position: relative;
                 top: 70%;
                 transform: translateY(-70%);
             }
         }
+
         @media (max-width: 768px) {
             .about-us.pp {
                 height: 48vh;
@@ -132,6 +183,7 @@
             }
 
         }
+
         .custom-modal-content p {
             font-size: 0.8rem;
         }
@@ -180,8 +232,9 @@
                             <div class="heading-part text-center">
                                 <h2 class="mb-2 color-gold">Privacy Policy – <span class="ethno">ZacrocoZ (ZRZ)</span>
                                 </h2>
-                                <span class="sub-title bn">Effective Date: April 22 2026</span>
-                                <span class="sub-title mt-2 bn">Last Updated : April 22 2026 </span>
+                                <span class="sub-title bn" id="effectiveDate"></span>
+                                <span class="sub-title mt-2 bn" id="lastUpdated"></span>
+
                                 <p class="mt-2"><span class="ethno">ZacrocoZ(ZRZ)</span> respects your privacy and is
                                     committed to
                                     protecting your personal information. This
@@ -354,7 +407,7 @@
 
     </div>
     <!-- End Of Main Div -->
-     <script src="js/txt-copy.js"></script>
+    <script src="js/txt-copy.js"></script>
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -366,7 +419,55 @@
     <script src="js/lang-translate.js"></script>
     <script src="js/sm-animate.js"></script>
     <script src="js/particle.min.js"></script>
+    <script>
 
+        function updateWeeklyDates() {
+
+            const startDate =
+                new Date(2026, 4, 10);
+
+            const today =
+                new Date();
+
+            today.setHours(0, 0, 0, 0);
+            startDate.setHours(0, 0, 0, 0);
+
+            const diffDays =
+                Math.floor(
+                    (today - startDate) /
+                    (1000 * 60 * 60 * 24)
+                );
+
+            const weeksPassed =
+                Math.floor(diffDays / 7);
+
+            const finalDate =
+                new Date(startDate);
+
+            finalDate.setDate(
+                startDate.getDate() + (weeksPassed * 7)
+            );
+
+            const formattedDate =
+                finalDate.toLocaleDateString(
+                    "en-US",
+                    {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric"
+                    }
+                ).replace(",", "");
+
+            document.getElementById("effectiveDate").innerText =
+                `Effective Date: ${formattedDate}`;
+
+            document.getElementById("lastUpdated").innerText =
+                `Last Updated : ${formattedDate}`;
+        }
+
+        updateWeeklyDates();
+
+    </script>
     <script>
         fetch('header.html')
             .then(response => response.text())

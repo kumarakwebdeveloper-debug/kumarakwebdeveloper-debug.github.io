@@ -4,7 +4,56 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="image/x-icon" href="images/logo-icons/PNG/32px flat.png" rel="icon">
     <title>ZacrocoZ || Transparency Dashboard</title>
+    <meta name="description"
+        content="Monitor live ZRZ token metrics, treasury visibility, liquidity tracking, and transparent blockchain ecosystem data in real time.">
+
+    <meta name="title" content="ZacrocoZ || Transparency Dashboard">
+
+    <meta name="keywords"
+        content="ZacrocoZ, ZRZ Token, ZacrocoZ Token, ZRZ Coin, ZacrocoZ Crypto, BNB Chain Token, BEP20 Token, Blockchain Ecosystem, Structured Blockchain, Transparent Blockchain Project, Decentralized Ecosystem, AI Integrated Blockchain, Multi Signature Treasury, Secure Crypto Project, Phased Liquidity Model, Zero Tax Token, Fixed Supply Token, Blockchain Transparency, Smart Contract Security, Long Term Crypto Project">
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ZacrocoZ">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <meta name="theme-color" content="#0f172a">
+    <meta name="msapplication-TileColor" content="#0f172a">
+    <link rel="canonical" href="https://zacrocoz.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zacrocoz.com/">
+    <meta property="og:title" content="ZacrocoZ (ZRZ) | Transparent Blockchain Ecosystem">
+    <meta property="og:description"
+        content="Discover ZacrocoZ (ZRZ), a transparent BEP20 blockchain ecosystem powered by structured liquidity, AI integration, decentralized infrastructure, and secure treasury management on BNB Chain.">
+    <meta property="og:image" content="https://zacrocoz.com/images/seo-banner.png">
+    <meta property="og:site_name" content="ZacrocoZ">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://zacrocoz.com/">
+    <meta name="twitter:title" content="ZacrocoZ (ZRZ) | Transparent Blockchain Ecosystem">
+    <meta name="twitter:description"
+        content="ZRZ Token powers the ZacrocoZ ecosystem with transparent blockchain infrastructure, fixed supply tokenomics, secure treasury systems, and decentralized long-term ecosystem growth.">
+
+    <meta name="twitter:image" content="https://zacrocoz.com/images/seo-banner.png">
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ZacrocoZ",
+        "url": "https://zacrocoz.com",
+        "logo": "https://zacrocoz.com/images/logo-main.png",
+        "sameAs": [
+            "https://bscscan.com/token/0x4cFa773Df72A3cCB89cb643Ad4c2A9b9F1692F5A",
+            "https://pancakeswap.finance/swap?outputCurrency=0x4cFa773Df72A3cCB89cb643Ad4c2A9b9F1692F5A&chain=bsc",
+            "https://dexscreener.com/bsc/0xb4d247b9cd3cf32860376566c3e02004f4484a79"
+        ]
+        }
+    </script>
+
+
 
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
@@ -34,6 +83,7 @@
         position: relative;
         z-index: 999;
     }
+
     .videoblk {
         position: relative;
         height: 60vh;
@@ -43,6 +93,7 @@
         justify-content: center;
         background: #0f172a;
     }
+
     #smbanner {
         position: absolute;
         top: 50%;
@@ -55,6 +106,7 @@
         object-fit: cover;
         z-index: 1;
     }
+
     /* .sub-page-banner::before {
         content: '';
         position: absolute;
@@ -153,41 +205,71 @@
             </div>
             <div class="hero-right">
                 <div class="hero-card">
+
                     <h3>Live Market Snapshot</h3>
+
                     <div class="metric-row">
                         <span>ZRZ Live Price</span>
-                        <span class="metric-value">---</span>
+                        <span class="metric-value" id="zrzPrice">---</span>
                     </div>
+
                     <div class="metric-row">
                         <span>Market Cap</span>
-                        <span class="metric-value">---</span>
+                        <span class="metric-value" id="marketCap">---</span>
                     </div>
+
                     <div class="metric-row">
                         <span>Total Liquidity</span>
-                        <span class="metric-value">---</span>
+                        <span class="metric-value" id="liquidity">---</span>
                     </div>
+
                     <div class="metric-row">
                         <span>24H Volume</span>
-                        <span class="metric-value">---</span>
+                        <span class="metric-value" id="volume24h">---</span>
                     </div>
+
                     <div class="metric-row">
-                        <span>Total Holders</span>
-                        <span class="metric-value">---</span>
+                        <span>24H Buys</span>
+                        <span class="metric-value" id="buys24h">---</span>
                     </div>
+
                     <div class="metric-row">
-                        <span>Total Transactions</span>
-                        <span class="metric-value">---</span>
+                        <span>24H Sells</span>
+                        <span class="metric-value" id="sells24h">---</span>
                     </div>
+
                     <div class="hero-links">
-                        <p><strong>Verification & Access (Investor Trust Layer)</strong></p>
+
+                        <p>
+                            <strong>
+                                Verification & Access (Investor Trust Layer)
+                            </strong>
+                        </p>
+
                         <a href="https://bscscan.com/address/0x4cFa773Df72A3cCB89cb643Ad4c2A9b9F1692F5A"
-                            class="link-chip mt-2" target="_blank">View Contract · BscScan</a>
-                        <a href="#" class="link-chip">View Liquidity Pool · PancakeSwap</a>
+                            class="link-chip mt-2" target="_blank">
+                            View Contract · BscScan
+                        </a>
+
+                        <a href="https://dexscreener.com/bsc/0xb4d247b9cd3cf32860376566c3e02004f4484a79"
+                            class="link-chip" target="_blank">
+                            View Liquidity Pool · PancakeSwap
+                        </a>
+
                         <a href="https://metamask.app.link/dapp/bscscan.com/token/0x4cFa773Df72A3cCB89cb643Ad4c2A9b9F1692F5A"
-                            class="link-chip" target="_blank">Add ZRZ to MetaMask</a>
+                            class="link-chip" target="_blank">
+                            Add ZRZ to MetaMask
+                        </a>
+
                         <a href="https://bscscan.com/address/0x752eE5486021007e821C5D9a776fb619BDC615ae"
-                            class="link-chip" target="_blank">Verify Multi-Signature Wallet (Treasury)</a>
-                        <p>All metrics and data are publicly verifiable in real-time on-chain.</p>
+                            class="link-chip" target="_blank">
+                            Verify Multi-Signature Wallet (Treasury)
+                        </a>
+
+                        <p>
+                            All metrics and data are publicly verifiable in real-time on-chain.
+                        </p>
+
                     </div>
                 </div>
             </div>
@@ -201,36 +283,62 @@
                 <!-- <p>Real‑time on‑chain data from DEX liquidity pools and verified contracts.</p> -->
             </div>
             <div class="metrics-grid">
+
                 <div class="metric-card">
                     <span class="metric-label">ZRZ Live Price</span>
-                    <span class="metric-caption">Real-time price derived from DEX liquidity pools</span><br>
-                    <span class="metric-main">---</span>
+                    <span class="metric-caption">
+                        Real-time price derived from DEX liquidity pools
+                    </span><br>
+
+                    <span class="metric-main" id="gridPrice">---</span>
                 </div>
+
                 <div class="metric-card">
                     <span class="metric-label">Market Capitalization</span>
-                    <span class="metric-caption">Total market value based on circulating supply</span><br>
-                    <span class="metric-main">---</span>
+                    <span class="metric-caption">
+                        Total market value based on circulating supply
+                    </span><br>
+
+                    <span class="metric-main" id="gridMarketCap">---</span>
                 </div>
+
                 <div class="metric-card">
                     <span class="metric-label">Total Liquidity</span>
-                    <span class="metric-caption">Combined liquidity across supported DEX platforms</span><br>
-                    <span class="metric-main">---</span>
+                    <span class="metric-caption">
+                        Combined liquidity across supported DEX platforms
+                    </span><br>
+
+                    <span class="metric-main" id="gridLiquidity">---</span>
                 </div>
+
                 <div class="metric-card">
                     <span class="metric-label">24H Trading Volume</span>
-                    <span class="metric-caption">Total trading activity within the last 24 hours</span><br>
-                    <span class="metric-main">---</span>
+                    <span class="metric-caption">
+                        Total trading activity within the last 24 hours
+                    </span><br>
+
+                    <span class="metric-main" id="gridVolume">---</span>
                 </div>
+
                 <div class="metric-card">
                     <span class="metric-label">Total Holders</span>
-                    <span class="metric-caption">Unique wallet addresses holding ZRZ</span>
-                    <span class="metric-main">---</span>
+                    <span class="metric-caption">
+                        Unique wallet addresses holding ZRZ
+                    </span><br>
+
+                    <!-- <span class="metric-main" id="gridBuys">Coming Soon</span> -->
+                    <span class="metric-main">Coming Soon</span>
                 </div>
+
                 <div class="metric-card">
                     <span class="metric-label">Total Transactions</span>
-                    <span class="metric-caption">Cumulative on-chain ZRZ transactions</span><br>
-                    <span class="metric-main">---</span>
+                    <span class="metric-caption">
+                        Cumulative on-chain ZRZ transactions
+                    </span><br>
+                    <span class="metric-main">Coming Soon</span>
+                    <!-- <span class="metric-main" id="gridSells">Coming Soon</span> -->
                 </div>
+
             </div>
         </section>
 
@@ -1005,6 +1113,7 @@
         }
     </script>
 
+    <script src="js/trans_board_live_price_data.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>

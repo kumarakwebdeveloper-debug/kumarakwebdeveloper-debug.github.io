@@ -338,7 +338,7 @@ main {
 
 .metric-value {
   font-weight: 600;
-  color: var(--text-main);
+  color: #cfac37;
   font-size: 14px;
 }
 
